@@ -27,5 +27,3 @@ RUN svn co --quiet --trust-server-cert --non-interactive https://code.svn.wordpr
 
 # Remove filter_var check that prevents connecting to local IP addresses (photon r436).
 RUN sed -i.bak -e 's/ *FILTER_FLAG_NO_PRIV_RANGE *|//g' /var/www/html/index.php
-
-COPY docker-entrypoint.sh /usr/local/bin/
